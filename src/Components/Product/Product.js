@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 export default class Product extends Component{
 
     render(){
-        console.log(this.props.id);
+        //console.log(this.props.id);
         return(
             <div className='single-prod'>
                 <img src={this.props.img}/>

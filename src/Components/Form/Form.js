@@ -17,7 +17,6 @@ export default class Form extends Component {
 
     priceInput = (val) => {
         this.setState({ price: val });
-        //console.log(this.state.price);
     }
 
     imgInput = (val) => {

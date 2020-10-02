@@ -22,7 +22,7 @@ export default class App extends Component {
   getAllInv() {
     Axios.get('/api/inventory')
     .then( res => {
-      console.log(res);
+      //console.log(res);
       this.setState({inventory: res.data})
     })
     .catch(err => console.log(err))
