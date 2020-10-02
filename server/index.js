@@ -12,7 +12,7 @@ app.use(express.json());
 app.get('/api/inventory',ctrl.getInventory);
 app.post('/api/product',ctrl.addInventory);
 app.delete('/api/product/:id',ctrl.deleteProduct);
-app.put('/api/product/:id',ctrl.editProduct)
+app.put('/api/product/:id',ctrl.editProduct);
 
 massive({
     connectionString: CONNECTION_STRING,

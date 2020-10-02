@@ -31,9 +31,9 @@ export default class Form extends Component {
         })
     }
 
-    // componentDidMount(){
-    //     this.props.getAllInvFn();
-    // }
+    componentDidMount(){
+        this.props.getAllInvFn();
+    }
 
     addProduct = () => {
         let newProduct = {

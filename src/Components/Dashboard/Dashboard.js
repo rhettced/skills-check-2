@@ -4,6 +4,11 @@ import Axios from 'axios'
 
 export default class Dashboard extends Component{
 
+    // componentDidUpdate(prevState,prevProps){
+    //     if(prevProps.this.props.inventory != this.props.inventory){
+    //         return this.props.inventory;
+    //     }
+    // }
 
     deleteProduct = (id) =>{
         Axios.delete(`/api/product/${id}`)

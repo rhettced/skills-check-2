@@ -9,7 +9,8 @@ export default class App extends Component {
   constructor(){
     super();
     this.state={
-      inventory: []
+      inventory: [],
+      currentSelect: null
     }
     this.getAllInv = this.getAllInv.bind(this);
   }
@@ -28,6 +29,7 @@ export default class App extends Component {
     .catch(err => console.log(err))
   }
 
+ 
 
   render(){
 
@@ -37,7 +39,8 @@ export default class App extends Component {
         <div className='main-body'>
           <Dashboard inventory={this.state.inventory}
                      getAllInvFn={this.getAllInv}/>
-          <Form getAllInvFn={this.getAllInv}/>
+          <Form getAllInvFn={this.getAllInv}
+                currentSelect={this.state.currentSelect}/>
         </div>
       </div>
     );
