@@ -35,7 +35,8 @@ export default class App extends Component {
       <div className="App">
         <Header/>
         <div className='main-body'>
-          <Dashboard inventory={this.state.inventory}/>
+          <Dashboard inventory={this.state.inventory}
+                     getAllInvFn={this.getAllInv}/>
           <Form getAllInvFn={this.getAllInv}/>
         </div>
       </div>

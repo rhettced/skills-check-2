@@ -11,6 +11,7 @@ app.use(express.json());
 //endpoints
 app.get('/api/inventory',ctrl.getInventory);
 app.post('/api/product',ctrl.addInventory);
+app.delete('/api/product/:id',ctrl.deleteProduct);
 
 massive({
     connectionString: CONNECTION_STRING,
