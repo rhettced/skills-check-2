@@ -31,13 +31,16 @@ export default class Form extends Component {
         })
     }
 
-    componentDidUpdate(prevProps){
-
-        if(prevProps.match.params.id !== this.props.match.params.id && this.props.match.params.id !== null){
-            this.getSingleInv();
-        }
-        
+    componentDidMount(){
+        this.getSingleInv();
     }
+    // componentDidUpdate(prevProps){
+    //     console.log('barf')
+    //      if(prevProps.match.params.id !== this.props.match.params.id && this.props.match.params.id !== null){
+    //         this.getSingleInv();
+    //      }
+        
+    // }
  
     getSingleInv = () => {
         Axios.get(`/api/inventory/${this.props.match.params.id}`)
@@ -85,6 +88,7 @@ export default class Form extends Component {
             Axios.post('/api/product', newProduct)
             .then(res => {
                 console.log(res.data)
+                this.props.history.push('/dashboard')
                 this.setState({ inventory: res.data })
                 
             })
