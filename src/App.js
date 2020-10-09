@@ -4,32 +4,15 @@ import './App.css';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Form from './Components/Form/Form';
 import Header from './Components/Header/Header';
+import routes from './routes';
 
 export default class App extends Component {
   constructor(){
     super();
-    this.state={
-      inventory: [],
-      currentSelect: null
-    }
-    this.getAllInv = this.getAllInv.bind(this);
+    
   }
 
-  
-  componentDidMount(){
-    this.getAllInv();
-  }
-  
-  getAllInv() {
-    Axios.get('/api/inventory')
-    .then( res => {
-      //console.log(res);
-      this.setState({inventory: res.data})
-    })
-    .catch(err => console.log(err))
-  }
 
- 
 
   render(){
 
@@ -37,11 +20,14 @@ export default class App extends Component {
       <div className="App">
         <Header/>
         <div className='main-body'>
-          <Dashboard inventory={this.state.inventory}
-                     getAllInvFn={this.getAllInv}/>
+          {/* <Dashboard inventory={this.state.inventory}
+                     getAllInvFn={this.getAllInv}
+                     editButtonFn={this.editButton}/>
           <Form getAllInvFn={this.getAllInv}
-                currentSelect={this.state.currentSelect}/>
+                currentSelect={this.state.currentSelect}
+                editOnFormFn={this.editOnForm}/> */}
         </div>
+        {routes}
       </div>
     );
   }

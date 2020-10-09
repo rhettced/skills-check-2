@@ -17,7 +17,7 @@ module.exports ={
     },
     deleteProduct: (req,res) => {
         const db = req.app.get('db');
-        console.log(req.params)
+        //console.log(req.params)
         const{id} = req.params;
 
         db.delete_product(id)
@@ -32,5 +32,15 @@ module.exports ={
         db.update_product([id,name,price,img])
         .then(inv => res.status(200).send(inv))
         .catch(err => res.status(500).send(err))
+       // console.log(req.params.id, req.body);
+    },
+    singleProd: (req,res) => {
+        const {id} = req.params;
+        const db = req.app.get('db');
+        console.log(req.params);
+
+        db.get_single(id)
+        .then(inv => res.status(200).send(inv))
+        .catch(err => console.log(err))
     }
 }

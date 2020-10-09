@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 img{
@@ -14,11 +15,14 @@ img{
 }
 
 .form-main{
+  box-sizing: border-box;
   border: 2px solid black;
   width: 300px;
   height: 400px;
   margin: 75px 150px;
   background-color: #3AD886;
+  /* position: relative;
+  top: 320px; */
 }
 
 .main-body{
@@ -38,3 +42,19 @@ img{
   height: 75px;
   padding: 25px;
 }
+
+.the-buttons{
+  padding: 20px 0px;
+}
+
+.header p{
+  margin: 0px 20px;
+  background-color: #AB2A19;
+  color: white;
+}
+/* .the-buttons button{
+  padding: 0px 10px;
+} */
+/* .form-main img{
+  padding: 15px 0px;
+} */

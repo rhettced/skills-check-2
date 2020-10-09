@@ -10,4 +10,4 @@ update shelfie
 set img = $4
 where id = $1;
 
-select * from shelfie where id = $1;
+select * from shelfie;

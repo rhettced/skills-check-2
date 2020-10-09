@@ -1,18 +1,25 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+import Axios from 'axios';
 
 export default class Product extends Component{
 
+
+
     render(){
         //console.log(this.props.id);
+        const {id,name,img,price} = this.props;
         return(
             <div className='single-prod'>
-                <img src={this.props.img}/>
+                <img src={img}/>
     
                 <div>
-                    <p>{this.props.name}</p>
-                    <p>${this.props.price}</p>
+                    <p>{name}</p>
+                    <p>${price}</p>
                     <button onClick={() => this.props.deleteProductFn(this.props.id)}>Delete</button>
-                    <button>Edit</button>
+                    <Link to={`/edit/${id}`}>
+                        <button>Edit</button>
+                    </Link>
                 </div>
                    
             </div>

@@ -10,6 +10,7 @@ app.use(express.json());
 
 //endpoints
 app.get('/api/inventory',ctrl.getInventory);
+app.get('/api/inventory/:id',ctrl.singleProd);
 app.post('/api/product',ctrl.addInventory);
 app.delete('/api/product/:id',ctrl.deleteProduct);
 app.put('/api/product/:id',ctrl.editProduct);
