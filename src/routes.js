@@ -7,6 +7,7 @@ import App from './App';
 export default(
     <Switch>
         {/* <Route component={App} exact path='/'/> */}
+        <Route component={Dashboard} exact path='/'/>
         <Route component={Form} path='/form'/>
         <Route component={Form} path='/edit/:id'/>
         <Route component={Dashboard} path='/dashboard'/>
